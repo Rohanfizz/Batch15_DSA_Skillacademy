@@ -9,4 +9,5 @@ function printAllSubarrays(arr) {
         }
     }
 }
-printAllSubarrays([5, 6, 2, 3]);
+// printAllSubarrays([5, 6, 2, 3]);
+console.log(process.argv)

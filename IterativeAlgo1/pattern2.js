@@ -13,4 +13,5 @@ function pattern2(n) {
         console.log(currRow);
     }
 }
-pattern2(15);
+console.log(process.argv)
+pattern2(parseInt(process.argv[2]));
