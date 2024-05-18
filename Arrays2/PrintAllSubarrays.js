@@ -7,7 +7,7 @@ function printAllSubarrays(arr) {
             }
             console.log(s);
         }
-    }
+    } 
 }
 // printAllSubarrays([5, 6, 2, 3]);
 console.log(process.argv)
