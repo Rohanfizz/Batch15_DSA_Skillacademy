@@ -23,23 +23,21 @@ function constructTree(arr) {
     return me;
 }
 var root = constructTree(arr);
-var preOrder = [];
-var inOrder = [];
-var postOrder = [];
-function dfs(node) {
+function displayTree(node) {
     if (node == null)
         return;
-    // 1st time
-    preOrder.push(node.val);
-    dfs(node.left);
-    // 2nd time
-    inOrder.push(node.val);
-    dfs(node.right);
-    // 3rd time
-    postOrder.push(node.val);
+    displayTree(node.left);
+    // print node data
+    var s = "" + node.val + ": ";
+    if (node.left != null)
+        s += node.left.val + ", ";
+    else
+        s += "null, ";
+    if (node.right != null)
+        s += node.right.val;
+    else
+        s += "null";
+    console.log(s);
+    displayTree(node.right);
 }
-console.log(root);
-dfs(root);
-console.log(preOrder);
-console.log(inOrder);
-console.log(postOrder);
+displayTree(root);
